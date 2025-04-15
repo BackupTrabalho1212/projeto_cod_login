@@ -145,3 +145,18 @@ body {
         font-size: 20px;
     }
 }
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.input-group.error input {
+    border-color: #e74c3c;
+}
+
+.input-group.success input {
+    border-color: #2ecc71;
+}

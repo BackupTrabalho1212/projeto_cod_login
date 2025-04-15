@@ -15,10 +15,11 @@
                 <h1>Login</h1>
             </div>
             
-            <form action="#" method="post">
+            <form id="loginForm" action="#" method="post">
                 <div class="input-group">
-                    <label for="username"><i class="fas fa-user"></i> Usuário</label>
-                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    <span id="emailError" class="error-message"></span>
                 </div>
                 
                 <div class="input-group">
@@ -41,5 +42,7 @@
             </form>
         </div>
     </div>
+    
+    <script src="main.js"></script>
 </body>
 </html>
