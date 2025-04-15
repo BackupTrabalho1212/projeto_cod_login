@@ -101,7 +101,7 @@
                     <button type="submit" class="btn-submit">
                         <i class="fas fa-check"></i> Cadastrar
                     </button>
-                    <a href="#" class="btn-cancel">
+                    <a href="#" class="btn-cancel" id="btnCancel">
                         <i class="fas fa-times"></i> Cancelar
                     </a>
                 </div>
@@ -112,6 +112,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Adicione isto antes do fechamento do </body> -->
+<div id="confirmModal" class="modal">
+    <div class="modal-content">
+        <p>DESEJA CANCELAR E LIMPAR TODOS OS CAMPOS?</p>
+        <div class="modal-buttons">
+            <button id="confirmYes" class="modal-btn confirm-btn">SIM</button>
+            <button id="confirmNo" class="modal-btn cancel-btn">NÃO</button>
+        </div>
+    </div>
+</div>
 
     <script src="script-cadastro.js"></script>
 </body>

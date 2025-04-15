@@ -90,3 +90,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Adicione estas funções ao seu arquivo JavaScript existente
+
+// Modal de confirmação
+const modal = document.getElementById('confirmModal');
+const btnCancel = document.querySelector('.btn-cancel');
+const confirmYes = document.getElementById('confirmYes');
+const confirmNo = document.getElementById('confirmNo');
+
+btnCancel.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+});
+
+confirmNo.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+confirmYes.addEventListener('click', function() {
+    // Limpar todos os campos do formulário
+    document.getElementById('form-cadastro').reset();
+    
+    // Resetar a barra de força da senha
+    document.querySelector('.strength-bar').style.width = '0%';
+    document.querySelector('.strength-text').textContent = 'Força da senha';
+    
+    // Esconder mensagens de erro
+    document.getElementById('senha-error').classList.remove('show');
+    
+    // Fechar o modal
+    modal.style.display = 'none';
+    
+    // Fechar a tela (opcional - descomente se quiser)
+    // window.location.href = 'index.html'; // ou outra página
+});
+
+// Fechar modal ao clicar fora dele
+window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
